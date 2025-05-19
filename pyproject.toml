@@ -3,10 +3,10 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "your-pre-commit-hook"
+name = "detect-extra-commas"
 version = "0.1.0"
-authors = [{name = "Your Name", email = "email@example.com"},]
-description = "TODO"
+authors = [{name = "Andy Snell", email = "none.of@your.biz"},]
+description = "Tests for the presence of unwanted trailing commas in SQL files."
 readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = [
@@ -16,7 +16,7 @@ classifiers = [
 urls.Homepage = "https://example.com"
 urls.Documentation = "https://example.com/docs"
 
-dependencies = ["your-hook-dependencies"]
+dependencies = ["sqlparse"]
 requires-python = ">=3.10"
 optional-dependencies.dev = [
     "pre-commit",  # so you can run hooks on the codebase
@@ -24,7 +24,7 @@ optional-dependencies.dev = [
 ]
 
 # TODO: update `your-script-name` and the path
-scripts.your-script-name = "your_pkg.your_module:hook_function"
+scripts.detect-extra-commas = "src.comma_test.cli:main"
 
 # optional (if you are making a package)
 [tool.setuptools.packages.find]

@@ -1,0 +1,6 @@
+- id: detect-extra-commas
+  name: detect extra SQL commas
+  description: This hook detects unwanted commas in SQL files.
+  entry: exif-stripper
+  language: python
+  types: [sql]
